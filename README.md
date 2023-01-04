@@ -1,7 +1,7 @@
 # HTTP to SOCKS tiny proxy server
 
 The idea is to have a proxy server that can be used to tunnel HTTP traffic to some server through a proxy (e.g. socks5 or http proxy). 
-This is useful when you want to use a reverse proxy in microservices architecture to route traffic to a specific service without changing the client code (except base url).
+This is useful when you want to use a reverse proxy service to route traffic to a specific host without changing the client code (except base url).
 
 ## Usage
 
