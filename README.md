@@ -32,10 +32,10 @@ services:
     image: ghcr.io/revenkroz/http-to-socks5-proxy:latest
     container_name: proxy
     environment:
-      - PROXY_DSN: 'socks5://test1:test2@123.123.123.123:25000'
-      - TARGET_HOST: https://api.example.com
-      - DEFAULT_HEADERS: 'Authorization: Bearer test'
-      - IGNORE_SSL: true
+      PROXY_DSN: 'socks5://test1:test2@123.123.123.123:25000'
+      TARGET_HOST: https://api.example.com
+      DEFAULT_HEADERS: 'Authorization: Bearer test'
+      IGNORE_SSL: true
     ports:
         - 8080:8080
 ```
