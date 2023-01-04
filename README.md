@@ -29,7 +29,7 @@ version: '3.9'
 
 services:
   api_example_com_proxy:
-    image: ghcr.io/revenkroz/http-to-socks5-proxy:latest
+    image: ghcr.io/revenkroz/http-to-socks5-proxy:main
     container_name: proxy
     environment:
       PROXY_DSN: 'socks5://test1:test2@123.123.123.123:25000'
@@ -37,5 +37,5 @@ services:
       DEFAULT_HEADERS: 'Authorization: Bearer test'
       IGNORE_SSL: true
     ports:
-        - 8080:8080
+        - "8080:8080"
 ```
