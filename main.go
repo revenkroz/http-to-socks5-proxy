@@ -61,6 +61,9 @@ func newProxyHandler(httpClient *http.Client, targetHost string, headersMap map[
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		// get path from request and append to target url
 		target, _ := url.Parse(targetHost + r.URL.Path)
+		if r.URL.RawQuery != "" {
+			target.RawQuery = r.URL.RawQuery
+		}
 
 		// create new request
 		req, err := http.NewRequest(r.Method, target.String(), r.Body)
